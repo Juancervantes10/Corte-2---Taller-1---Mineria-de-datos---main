@@ -1,0 +1,329 @@
+@import url(global.css);
+
+
+.texto-amarillo {
+  color: rgb(255, 217, 0);
+}
+
+.principal {
+  height: 100vh;
+  display: grid;
+}
+
+.principal-contenido {
+  display: grid;
+  grid-template-areas:
+    "izquierda"
+    "derecha"
+    "footer";
+  grid-template-rows: 10vh 70vh;
+}
+
+
+.contenido-izquierda {
+  grid-area: izquierda;
+}
+
+.menu-principal__contenedor {
+  display: grid;
+  height: 10vh;
+
+}
+
+.menu-principal__contenido {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  align-items: center;
+  text-align: center;
+}
+
+.menu-principal__item {
+  padding-left: 15px;
+  text-align: center;
+}
+
+.menu-principal__item a {
+  text-decoration: none;
+  color: #252830;
+  font-size: 1.1em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding: 0px 10px 5px 10px;
+}
+
+.menu-principal__item a:hover {
+  border-bottom: 2px solid #000;
+}
+
+
+
+/* MENU */
+/* FIN MENU*/
+
+.contenido-derecha {
+  display: grid;
+  grid-area: derecha;
+  background-color: #16161D;
+  align-content: center;
+  height: 100vh;
+}
+
+.derecha-grid {
+  display: grid;
+  grid-template-areas:
+    "contenido"
+    "footer";
+  height: 100vh;
+}
+
+.pagina__inicio {
+  grid-area: contenido;
+}
+
+.footer {
+
+  grid-area: footer;
+}
+
+
+/* Seccion inicio */
+
+.inicio-contenido {
+  display: grid;
+  grid-template-areas:
+    "titulo imagen"
+    "parrafo imagen"
+    "boton imagen";
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  padding: 5vw;
+
+}
+
+.inicio-titulo {
+  grid-area: titulo;
+}
+
+.inicio-parrafo {
+  grid-area: parrafo;
+}
+
+.inicio-imagen {
+  grid-area: imagen;
+}
+
+.inicio__titulo {
+  font-size: 4vw;
+  color: aliceblue;
+}
+
+.inicio__subtitulo {
+  font-size: 1.9vw;
+  color: rgb(230, 230, 230);
+  font-weight: 300;
+}
+
+.inicio__parrafo strong {
+  color: white;
+}
+
+.inicio__parrafo {
+  font-size: 1.3vw;
+  color: rgb(182, 182, 182);
+  font-weight: 300;
+}
+
+.inicio__link {
+  grid-area: boton;
+  border-radius: 0.2vw;
+  cursor: pointer;
+  padding: 1vw 1vw;
+  width: 15vw;
+  background-color: #efe9f4;
+  color: black;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.inicio__imagen {
+  height: 30vh;
+  width: auto;
+}
+
+/* Seccion inicio FIN */
+
+
+.footer {
+  grid-area: footer;
+}
+
+.footer-container {
+  display: block;
+  padding: 50px 30px;
+  background-color: #1d1d1d;
+}
+
+.footer-content {
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.footer-referencia,
+.footer-siguenos,
+.footer-juegos {
+  margin-right: 80px;
+}
+
+.footer-title {
+  margin-bottom: 40px;
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 1.4;
+  color: white;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.footer-list__item {
+  font-size: 10pt;
+  display: inline-block;
+  color: #aaaaaa;
+  text-decoration: none;
+  transition: all;
+  transition: all 0.15s ease-in-out;
+  margin: 10px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+
+.footer__riot-logo {
+  display: block;
+  width: 110px;
+  height: 40px;
+}
+
+.footer-text {
+  max-width: 600px;
+}
+
+.footer__copyright {
+  display: inline-block;
+  color: #aaaaaa;
+  font-size: 11pt;
+  line-height: 1.4;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .principal-contenido {
+    display: grid;
+    grid-template-areas:
+      "izquierda"
+      "derecha"
+      "footer";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+  }
+
+  .contenido-izquierda {
+    grid-area: izquierda;
+  }
+
+  .contenido-derecha {
+    grid-area: derecha;
+  }
+
+  .footer{
+    grid-area: footer;
+  }
+
+  .menu-principal__contenedor {
+    display: grid;
+    height: 10vh;
+    width: 50vw;
+  }
+
+  .menu-principal__contenido {
+    display: flex;
+    justify-content: start;
+  }
+
+  .menu-principal__item {
+    padding: 0;
+  }
+
+  .menu-principal__item a {
+    padding: 0px 10px 5px 10px;
+  }
+
+  .contenido-derecha {
+    display: grid;
+    background-color: #16161D;
+    align-content: center;
+    height: 100vh;
+  }
+
+  .derecha-grid {
+    display: grid;
+    grid-template-areas:
+      "contenido";
+    padding: 5vw;
+  }
+
+  .inicio-contenido {
+    display: grid;
+    grid-template-areas:
+      "titulo"
+      "parrafo"
+      "imagen"
+      "boton";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 10vh;
+    padding: 0;
+  }
+
+
+  .inicio__titulo {
+    font-size: 13vw;
+  }
+
+  .inicio__subtitulo {
+    font-size: 6vw;
+
+  }
+
+  .inicio__parrafo {
+    font-size: 5vw;
+  }
+
+  .inicio__imagen {
+    height: 10vh;
+    width: auto;
+  }
+
+  
+  .inicio__link{
+    padding: 4vw 4vw;
+    font-size: 5vw;
+  }
+
+
+}
